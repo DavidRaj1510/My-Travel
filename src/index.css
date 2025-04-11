@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --radius: 0.8rem;
+    --primary: 222 89% 53%;
+    --secondary: 260 70% 50%;
+    --accent: 42 100% 62%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-full transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-center mb-4 leading-tight text-foreground;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground mb-12 text-center max-w-2xl mx-auto;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium text-gray-700 hover:text-primary transition duration-200;
+  }
+
+  .glass-card {
+    @apply bg-white/30 backdrop-blur-lg p-6 rounded-xl shadow-lg border border-white/20;
+  }
+
+  .info-badge {
+    @apply text-sm px-4 py-1 rounded-full bg-white/10 text-white backdrop-blur-sm;
+  }
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.glass-effect {
+  @apply bg-white/90 backdrop-blur-lg border border-white/20 shadow-md;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-black/50 to-black/10;
+}
